@@ -1,0 +1,11 @@
+.navbar{
+    height: 100px;
+    background-color: #050A30;
+    color:  #7EC8E3;
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }

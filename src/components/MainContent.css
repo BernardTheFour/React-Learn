@@ -1,0 +1,29 @@
+.content{
+    height: auto;
+    width: auto;
+    background-color:white;
+    color:  #050A30;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.todo-list{    
+    width: 80%;
+}
+
+.todo-item{
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding: 10px 10px 10px;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+}
