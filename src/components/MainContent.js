@@ -5,14 +5,13 @@ import "./MainContent.css";
 
 export default MainContent
 
-function MainContent() {
+function MainContent() {  
     return (
         <main className="content">
             <h2>Todo List</h2>
             <div className="todo-list">
-                <TodoItem param={{name: `List A`, checked: true}}/>
-                <TodoItem param={{name: `List B`, checked: false}}/>
-                <TodoItem param={{name: `List C`, checked: false}}/>
+                <TodoItem param={{name: `Title 1`, checked: true}}/>
+                <TodoItem param={{name: `Title 2`, checked: false}}/>
             </div>
         </main>
     )

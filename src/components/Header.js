@@ -8,6 +8,7 @@ export default Header
 // functions
 function Header() {
     let hour = new Date().getHours()
+    //let hour = 12
     var name = 'Bernard'
     var messages
 
