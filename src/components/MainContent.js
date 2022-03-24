@@ -6,6 +6,7 @@ import "./MainContent.css";
 export default MainContent
 
 function MainContent() {  
+    
     return (
         <main className="content">
             <h2>Todo List</h2>
