@@ -47,7 +47,7 @@ function MainContent() {
                         type="number"
                         name="Id"
                         placeholder="Enter User Id"
-                        onChange={e=>setUserId(e.target.value < 0 && 0)}
+                        onChange={e=>setUserId(e.target.value < 0 ? 0 : e.target.value)}
                         value={UserId}
                     />
                 </form>
