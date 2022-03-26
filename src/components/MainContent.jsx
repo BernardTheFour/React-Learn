@@ -34,6 +34,7 @@ function MainContent() {
         <main className="content">
             <div>
                 <form>
+                    INPUT USER ID<br/>
                     <input
                         type="number"
                         name="Id"
