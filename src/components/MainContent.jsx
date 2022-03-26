@@ -1,33 +1,42 @@
-import React, { useState, useEffect } from "react";
-import CallAPI from './CallAPI'
+import React, { useState, useEffect, useContext } from "react";
+import TodosAPI from './todos/TodosAPI'
 
-import TodoItem from './TodoItem'
+import TodoItem from './todos/TodoItem'
 import "./MainContent.css";
+import { TodoContext, UserContext } from "./context/TodoContext";
 
 export default MainContent
 
 function MainContent() {
-    let [UserId, setUserId] = useState(1)
+    let [UserId, setUserId] = useState(0)
     let [todoList, setTodo] = useState([])
+    const [todoContext, setTodoCxt] = useContext(TodoContext)
+    
 
     useEffect(async () => {
         // check it was null or not
-        let todos = CallAPI(!UserId? 0: UserId)
+        let todos = TodosAPI(!UserId? 0: UserId)
 
         todos.data.then(items => {
             let data = []
+            let completed = 0
 
             items.map(item => {
                 data.push(<TodoItem
                     key={item.id}
                     name={item.title}
-                    checked={item.checked} />)
-            })
-            setTodo(data)
-            return todos.cancel()
-        })
+                    checked={item.completed} />)
 
-    }, [UserId])
+                    if(item.completed){
+                        completed++
+                    }
+            })
+            
+            setTodoCxt(completed)
+            setTodo(data)
+        return todos.cancel()
+        })
+    }, [UserId])    
 
     return (
         <main className="content">
@@ -38,7 +47,7 @@ function MainContent() {
                         type="number"
                         name="Id"
                         placeholder="Enter User Id"
-                        onChange={e=>setUserId(e.target.value)}
+                        onChange={e=>setUserId(e.target.value < 0 && 0)}
                         value={UserId}
                     />
                 </form>

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default function CallAPI(UserId) {
+export default function TodosAPI(UserId) {
     // create api endpoint
     const api = axios.create({
         baseURL: 'http://jsonplaceholder.typicode.com/users/'

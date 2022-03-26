@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './MainContent.css'
+import '../MainContent.css'
 
 export default TodoItem
 
