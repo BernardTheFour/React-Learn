@@ -23,7 +23,6 @@ function MainContent() {
                     name={item.title}
                     checked={item.checked} />)
             })
-            console.log(data)
             setTodo(data)
             return todos.cancel()
         })
